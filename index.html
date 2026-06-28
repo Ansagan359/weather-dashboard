@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <meta name="description" content="A clean weather dashboard with a live 7-day forecast. No API key required." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <h1 class="brand"><span class="mark"></span> Weather</h1>
+        <button id="unitToggle" class="unit" title="Toggle units">°C</button>
+      </header>
+
+      <form id="searchForm" class="search" role="search">
+        <input id="cityInput" class="search__input" type="text" placeholder="Search a city…" autocomplete="off" />
+        <button class="search__btn" type="submit">Search</button>
+        <button id="geoButton" class="search__geo" type="button" title="Use my location">📍</button>
+      </form>
+
+      <p id="status" class="status" hidden></p>
+
+      <section id="result" class="result" hidden>
+        <h2 id="place" class="place"></h2>
+        <div id="current" class="card"></div>
+        <div id="forecast" class="grid"></div>
+      </section>
+
+      <footer class="foot">
+        Data by <a href="https://open-meteo.com/">Open-Meteo</a> ·
+        <a href="https://github.com/Ansagan359/weather-dashboard">Source</a>
+      </footer>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
